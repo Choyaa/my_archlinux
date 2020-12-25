@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/aki/.config/ranger'
+let g:netrw_dirhist_3='/sys/devices/pci0000:00/0000:00:02.0/drm/card0/card0-eDP-1/intel_backlight'
+let g:netrw_dirhist_2='/etc/X11/xinit'
+let g:netrw_dirhist_1='/etc/X11/xinit/xinitrc.d'
