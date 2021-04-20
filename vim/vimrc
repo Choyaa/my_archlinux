@@ -41,9 +41,45 @@ noremap I 5k
 noremap K 5j
 "insert"
 noremap n i
+noremap N I
+"html ctrl+y+,  ----> su
+noremap <LEADER>y <C-y><C-,>
 "save and quit,<CR> is enter"
 map S :wq<CR>
-map Q :q<CR>
+map Q :q!<CR>
+map s <nop>
+map R :source $MYVIMRC<CR>
+map ; :
+
+"split
+map si :set splitright<CR>:vsplit<CR>
+map sn :set nosplitright<CR>:vsplit<CR>
+map su :set no splitbelow<CR>:split<CR>
+map se :set splitbelow<CR>:split<CR>
+"change the window space+ijkl
+map <LEADER>i <C-w>k
+map <LEADER>j <C-w>h
+map <LEADER>k <C-w>j
+map <LEADER>l <C-w>l
+
+"adjust each window size
+map <up> :res+5<CR>
+map <down> :res-5<CR>
+map <left> :vertical resize-5<CR>
+map <right> :vertical resize+5<CR>
+"create new window
+map tu :tabe<CR>
+map tj :-tabnext<CR>
+map tl :+tabnext<CR>
+"change sub window vertical or horizontal
+map sv <C-w>t<C-w>H
+map sh <C-w>t<C-w>K
+"insert ( { "  automatically )
+inoremap ( ()<Esc>i
+inoremap [ []<Esc>i
+inoremap { {}<Esc>i
+inoremap " ""<Esc>i
+
 
 "plugin
 set nocompatible            
@@ -65,6 +101,7 @@ Plug 'vim-airline/vim-airline'
 "auto Complete
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'
+Plug 'scrooloose/nerdcommenter'
 
 call plug#end()
 
